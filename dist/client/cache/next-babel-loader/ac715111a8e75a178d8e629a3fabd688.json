@@ -1,0 +1,1 @@
+{"ast":null,"code":"import React from \"react\";\nimport App from \"../components/App\";\nexport default (function () {\n  return React.createElement(App, null, React.createElement(\"p\", null, \"Next.js About Page\"));\n});","map":null,"metadata":{},"sourceType":"module"}

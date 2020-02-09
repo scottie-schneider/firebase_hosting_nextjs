@@ -106,15 +106,15 @@ module.exports = require("core-js/library/fn/object/get-prototype-of");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js
 var iterator = __webpack_require__("45mK");
 var iterator_default = /*#__PURE__*/__webpack_require__.n(iterator);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol.js
 var symbol = __webpack_require__("Gozm");
 var symbol_default = /*#__PURE__*/__webpack_require__.n(symbol);
 
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js
 
 
 
@@ -133,7 +133,7 @@ function typeof_typeof(obj) {
 
   return typeof_typeof(obj);
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -141,7 +141,7 @@ function _assertThisInitialized(self) {
 
   return self;
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _possibleConstructorReturn; });
 
 
@@ -1403,23 +1403,23 @@ module.exports = require("core-js/library/fn/object/keys");
 
 "use strict";
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
 var get_own_property_descriptor = __webpack_require__("FIas");
 var get_own_property_descriptor_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptor);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
 var get_own_property_symbols = __webpack_require__("8k7s");
 var get_own_property_symbols_default = /*#__PURE__*/__webpack_require__.n(get_own_property_symbols);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/keys.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/keys.js
 var keys = __webpack_require__("TPw6");
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
 var define_property = __webpack_require__("LcAa");
 var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
 
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -1435,7 +1435,7 @@ function _defineProperty(obj, key, value) {
 
   return obj;
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
 
 
@@ -1512,7 +1512,8 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 "use strict";
 // Initialize Firebase
-var firebase = __webpack_require__("wVQA");
+var firebase = __webpack_require__("wVQA"); // require("firebase/analytics");
+
 
 __webpack_require__("EuFW");
 
@@ -1522,20 +1523,43 @@ __webpack_require__("dCoW");
 
 __webpack_require__("ha8t");
 
-if (!firebase.apps.length) {
-  firebase.initializeApp({
-    apiKey: "AIzaSyBOhGIHYuIjGqqKDbF_JnEvdB-wXRMd9M",
-    authDomain: "follow-up-edge-backend.firebaseapp.com",
-    databaseURL: "https://follow-up-edge-backend.firebaseio.com",
-    projectId: "follow-up-edge-backend",
-    storageBucket: "follow-up-edge-backend.appspot.com",
-    messagingSenderId: "525694910604",
-    appId: "1:525694910604:web:7d802043ba78a9a83bfba9",
-    measurementId: "G-7M78EKCHFX"
-  });
-}
+var first, second;
 
-/* harmony default export */ __webpack_exports__["a"] = (firebase);
+var db = function db(url) {
+  if (!firebase.apps.length) {
+    first = firebase.initializeApp({
+      apiKey: "AIzaSyBOhGIHYuIjGqqKDbF_JnEvdB-wXRMd9Mk",
+      authDomain: "follow-up-edge-backend.firebaseapp.com",
+      databaseURL: "https://follow-up-edge-backend.firebaseio.com",
+      projectId: "follow-up-edge-backend",
+      storageBucket: "follow-up-edge-backend.appspot.com",
+      messagingSenderId: "525694910604",
+      appId: "1:525694910604:web:7d802043ba78a9a83bfba9",
+      measurementId: "G-7M78EKCHFX"
+    }, "first");
+    second = firebase.initializeApp({
+      apiKey: "AIzaSyAhu9Aptqfs6Q_xu9HS7jMvqpGcQkQCqT8",
+      authDomain: "wl-test-1.firebaseapp.com",
+      databaseURL: "https://wl-test-1.firebaseio.com",
+      projectId: "wl-test-1",
+      storageBucket: "wl-test-1.appspot.com",
+      messagingSenderId: "64946981609",
+      appId: "1:64946981609:web:a2335047c9e6c901113e78",
+      measurementId: "G-NMP46JDG1E"
+    }, "second"); // firebase.analytics();
+  } // return the appropriate object once all apps are initialized?
+
+
+  if (url == "us-central1-follow-up-edge-backend.cloudfunctions.net" || url == "localhost:5000") {
+    return first;
+  }
+
+  if (url == "us-central1-wl-test-1.cloudfunctions.net") {
+    return second;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (db);
 
 /***/ }),
 

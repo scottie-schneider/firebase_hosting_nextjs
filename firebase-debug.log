@@ -1,0 +1,142 @@
+[debug] [2020-02-09T21:30:48.383Z] ----------------------------------------------------------------------
+[debug] [2020-02-09T21:30:48.384Z] Command:       /usr/local/bin/node /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/.bin/firebase deploy --only functions,hosting
+[debug] [2020-02-09T21:30:48.384Z] CLI Version:   7.2.1
+[debug] [2020-02-09T21:30:48.384Z] Platform:      darwin
+[debug] [2020-02-09T21:30:48.384Z] Node Version:  v12.14.1
+[debug] [2020-02-09T21:30:48.384Z] Time:          Sun Feb 09 2020 16:30:48 GMT-0500 (Peru Standard Time)
+[debug] [2020-02-09T21:30:48.384Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2020-02-09T21:30:48.390Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-09T21:30:48.390Z] > authorizing via signed-in user
+[debug] [2020-02-09T21:30:48.390Z] [iam] checking project wl-test-1 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-02-09T21:30:48.391Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wl-test-1:testIamPermissions  
+
+[debug] [2020-02-09T21:30:49.005Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-09T21:30:49.006Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/wl-test-1  
+ 
+[debug] [2020-02-09T21:30:49.357Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Deploying to 'wl-test-1'...
+[info] 
+[info] i  deploying functions, hosting
+[debug] [2020-02-09T21:30:51.216Z] > [functions] package.json contents: {
+  "name": "functions-nextjs",
+  "description": "Next.js SSR React on Cloud Functions for Firebase with Firebase Hosting",
+  "version": "1.0.0",
+  "main": "dist/server/index.js",
+  "license": "MIT",
+  "scripts": {
+    "setup": "yarn firebase use --add",
+    "build:client": "next build src/client",
+    "build:server": "babel src/server --out-dir dist/server --source-maps",
+    "build": "yarn build:client && yarn build:server",
+    "watch:client": "next src/client",
+    "watch:server": "babel src/server --out-dir dist/server --source-maps --watch",
+    "watch": "yarn watch:client & yarn watch:server",
+    "serve": "cross-env NODE_ENV=production yarn firebase serve --only functions,hosting",
+    "predeploy": "rimraf dist/ && yarn build",
+    "deploy": "yarn firebase deploy --only functions,hosting"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "dependencies": {
+    "dotenv-webpack": "^1.7.0",
+    "firebase": "^7.8.1",
+    "firebase-admin": "^8.3.0",
+    "firebase-functions": "^3.2.0",
+    "next": "^9.0.2",
+    "next-absolute-url": "^1.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^5.0.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "cross-env": "^5.2.0",
+    "firebase-functions-test": "^0.1.6",
+    "firebase-tools": "^7.2.1",
+    "rimraf": "^2.6.3"
+  }
+}
+[info] i  functions: ensuring necessary APIs are enabled...
+[debug] [2020-02-09T21:30:51.217Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/wl-test-1/services/cloudfunctions.googleapis.com  
+ 
+[debug] [2020-02-09T21:30:51.217Z] >>> HTTP REQUEST GET https://serviceusage.googleapis.com/v1/projects/wl-test-1/services/runtimeconfig.googleapis.com  
+ 
+[debug] [2020-02-09T21:30:51.863Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-09T21:30:51.882Z] <<< HTTP RESPONSE 200
+[info] ✔  functions: all necessary APIs are enabled
+[debug] [2020-02-09T21:30:51.883Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/wl-test-1/adminSdkConfig  
+ 
+[debug] [2020-02-09T21:30:52.173Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-09T21:30:52.174Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/wl-test-1/versions  
+
+[debug] [2020-02-09T21:30:53.431Z] <<< HTTP RESPONSE 200
+[info] i  functions: preparing . directory for uploading...
+[debug] [2020-02-09T21:30:53.433Z] >>> HTTP REQUEST GET https://runtimeconfig.googleapis.com/v1beta1/projects/wl-test-1/configs  
+ 
+[debug] [2020-02-09T21:30:53.685Z] <<< HTTP RESPONSE 200
+[info] i  functions: packaged . (1.62 MB) for uploading
+[debug] [2020-02-09T21:30:54.352Z] >>> HTTP REQUEST POST https://cloudfunctions.googleapis.com/v1/projects/wl-test-1/locations/us-central1/functions:generateUploadUrl  
+ 
+[debug] [2020-02-09T21:31:39.953Z] <<< HTTP RESPONSE 500
+[debug] [2020-02-09T21:31:39.953Z] <<< HTTP RESPONSE BODY {
+  "error": {
+    "code": 500,
+    "message": "The service has encountered an internal error. Please try again later",
+    "status": "INTERNAL"
+  }
+}
+
+[info] 
+
+There was an issue deploying your functions. Verify that your project has a Google App Engine instance setup at https://console.cloud.google.com/appengine and try again. If this issue persists, please contact support.
+[warn] ⚠  functions: Upload Error: HTTP Error: 500, The service has encountered an internal error. Please try again later
+[error] 
+[error] Error: HTTP Error: 500, The service has encountered an internal error. Please try again later
+[debug] [2020-02-09T21:31:40.259Z] Error Context: {
+  "body": {
+    "error": {
+      "code": 500,
+      "message": "The service has encountered an internal error. Please try again later",
+      "status": "INTERNAL"
+    }
+  },
+  "response": {
+    "statusCode": 500,
+    "body": "{\n  \"error\": {\n    \"code\": 500,\n    \"message\": \"The service has encountered an internal error. Please try again later\",\n    \"status\": \"INTERNAL\"\n  }\n}\n",
+    "headers": {
+      "vary": "X-Origin, Referer, Origin,Accept-Encoding",
+      "content-type": "application/json; charset=UTF-8",
+      "date": "Sun, 09 Feb 2020 21:31:39 GMT",
+      "server": "ESF",
+      "cache-control": "private",
+      "x-xss-protection": "0",
+      "x-frame-options": "SAMEORIGIN",
+      "x-content-type-options": "nosniff",
+      "alt-svc": "quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000",
+      "accept-ranges": "none",
+      "transfer-encoding": "chunked"
+    },
+    "request": {
+      "uri": {
+        "protocol": "https:",
+        "slashes": true,
+        "auth": null,
+        "host": "cloudfunctions.googleapis.com",
+        "port": 443,
+        "hostname": "cloudfunctions.googleapis.com",
+        "hash": null,
+        "search": null,
+        "query": null,
+        "pathname": "/v1/projects/wl-test-1/locations/us-central1/functions:generateUploadUrl",
+        "path": "/v1/projects/wl-test-1/locations/us-central1/functions:generateUploadUrl",
+        "href": "https://cloudfunctions.googleapis.com/v1/projects/wl-test-1/locations/us-central1/functions:generateUploadUrl"
+      },
+      "method": "POST"
+    }
+  }
+}

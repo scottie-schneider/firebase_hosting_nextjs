@@ -17,11 +17,11 @@
   },
   "chunks": {
     "byName": {
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/_app.js": 0,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/_document.js": 1,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/_error.js": 2,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/about.js": 3,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/index.js": 4
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/_app.js": 0,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/_document.js": 1,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/_error.js": 2,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/about.js": 3,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/index.js": 4
     },
     "bySource": {},
     "usedIds": [

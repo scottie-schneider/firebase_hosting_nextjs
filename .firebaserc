@@ -1,5 +1,7 @@
 {
   "projects": {
-    "staging": "follow-up-edge-backend"
+    "staging": "follow-up-edge-backend",
+    "wl-test-1": "wl-test-1",
+    "wl-test-2": "wl-test-2"
   }
 }

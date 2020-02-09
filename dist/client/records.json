@@ -7,10 +7,10 @@
     "byName": {
       "commons": 0,
       "static/runtime/webpack.js": 1,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/_app.js": 2,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/_error.js": 3,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/about.js": 4,
-      "static/6XoUy-KNGIv7pYN14NVv8/pages/index.js": 5,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/_app.js": 2,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/_error.js": 3,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/about.js": 4,
+      "static/b_LLrt3uwehKuiv-y3d_O/pages/index.js": 5,
       "static/runtime/main.js": 6
     },
     "bySource": {},

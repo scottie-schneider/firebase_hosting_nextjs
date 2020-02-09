@@ -113,15 +113,15 @@ module.exports = require("core-js/library/fn/object/get-prototype-of");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js
 var iterator = __webpack_require__("45mK");
 var iterator_default = /*#__PURE__*/__webpack_require__.n(iterator);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol.js
 var symbol = __webpack_require__("Gozm");
 var symbol_default = /*#__PURE__*/__webpack_require__.n(symbol);
 
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js
 
 
 
@@ -140,7 +140,7 @@ function typeof_typeof(obj) {
 
   return typeof_typeof(obj);
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -148,7 +148,7 @@ function _assertThisInitialized(self) {
 
   return self;
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _possibleConstructorReturn; });
 
 
@@ -212,37 +212,37 @@ function _construct(Parent, args, Class) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/regenerator/index.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/regenerator/index.js
 var regenerator = __webpack_require__("k9sC");
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js
 var asyncToGenerator = __webpack_require__("yP/C");
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js
 var classCallCheck = __webpack_require__("h7sq");
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js
 var createClass = __webpack_require__("tS02");
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js + 2 modules
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js + 2 modules
 var possibleConstructorReturn = __webpack_require__("/XES");
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js
 var getPrototypeOf = __webpack_require__("ztBH");
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js
 var inherits = __webpack_require__("Fayl");
 
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__("cDcd");
 var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/next/app.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/next/app.js
 var app = __webpack_require__("Khd+");
 var app_default = /*#__PURE__*/__webpack_require__.n(app);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js
 var taggedTemplateLiteral = __webpack_require__("2ewA");
 
 // EXTERNAL MODULE: external "next/head"
@@ -269,14 +269,14 @@ var head_default = /*#__PURE__*/__webpack_require__.n(head_);
     rel: "stylesheet"
   }));
 });
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js + 1 modules
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js + 1 modules
 var objectSpread = __webpack_require__("rNCn");
 
 // EXTERNAL MODULE: external "styled-jsx/style"
 var style_ = __webpack_require__("HJQg");
 var style_default = /*#__PURE__*/__webpack_require__.n(style_);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/next/link.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/next/link.js
 var next_link = __webpack_require__("jvFD");
 var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
 
@@ -449,9 +449,14 @@ function () {
 // EXTERNAL MODULE: ./lib/db.js
 var db = __webpack_require__("u1Fb");
 
+// EXTERNAL MODULE: external "next-absolute-url"
+var external_next_absolute_url_ = __webpack_require__("dN/k");
+var external_next_absolute_url_default = /*#__PURE__*/__webpack_require__.n(external_next_absolute_url_);
+
 // CONCATENATED MODULE: ./pages/_app.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TenantContext", function() { return TenantContext; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _app_MyApp; });
+
 
 
 
@@ -483,7 +488,8 @@ function (_App) {
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps,
-          tenantObject = _this$props.tenantObject;
+          tenantObject = _this$props.tenantObject,
+          url = _this$props.url;
       return external_react_default.a.createElement(TenantContext.Provider, {
         value: tenantObject
       }, external_react_default.a.createElement(components_Page, {
@@ -496,63 +502,75 @@ function (_App) {
       var _getInitialProps = Object(asyncToGenerator["a" /* default */])(
       /*#__PURE__*/
       regenerator_default.a.mark(function _callee(_ref) {
-        var Component, router, ctx, pageProps, tenantObject, url;
+        var Component, router, ctx, absolute, pageProps, tenantObject, url, headersHost;
         return regenerator_default.a.wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 Component = _ref.Component, router = _ref.router, ctx = _ref.ctx;
+                absolute = external_next_absolute_url_default()(ctx.req);
                 pageProps = {}; // fallback tenant object used as a default
 
                 tenantObject = {
                   tagline: "Didn't find a url",
                   imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
                 };
-                _context.prev = 3;
-                _context.next = 6;
-                return db["a" /* default */].firestore().collection("tenants").doc(ctx.req.headers.host).get().then(function (documentSet) {
-                  if (documentSet.data()) {
-                    tenantObject = documentSet.data();
+                _context.prev = 4;
+                _context.next = 7;
+                return Object(db["a" /* default */])("us-central1-wl-test-1.cloudfunctions.net").firestore().collection("tenant").limit(1).get().then(function (docs) {
+                  if (docs.empty) {
+                    tenantObject = {
+                      tagline: "no doc found",
+                      imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+                    };
+                    return;
                   }
+
+                  docs.forEach(function (doc) {
+                    console.log(doc.id, doc.data());
+                    tenantObject = doc.data();
+                  });
                 })["catch"](function (err) {
                   return console.log(err);
                 });
 
-              case 6:
-                _context.next = 11;
+              case 7:
+                _context.next = 12;
                 break;
 
-              case 8:
-                _context.prev = 8;
-                _context.t0 = _context["catch"](3);
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](4);
                 console.log("error!", _context.t0);
 
-              case 11:
+              case 12:
                 if (!Component.getInitialProps) {
-                  _context.next = 15;
+                  _context.next = 16;
                   break;
                 }
 
-                _context.next = 14;
+                _context.next = 15;
                 return Component.getInitialProps(ctx);
 
-              case 14:
+              case 15:
                 pageProps = _context.sent;
 
-              case 15:
-                url = ctx.req.headers.host;
+              case 16:
+                url = absolute;
+                headersHost = ctx.req.headers.host;
                 return _context.abrupt("return", {
                   pageProps: pageProps,
                   tenantObject: tenantObject,
-                  url: url
+                  url: url,
+                  headersHost: headersHost
                 });
 
-              case 17:
+              case 19:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[3, 8]]);
+        }, _callee, null, [[4, 9]]);
       }));
 
       function getInitialProps(_x) {
@@ -1540,30 +1558,27 @@ function _setPrototypeOf(o, p) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/regenerator/index.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/regenerator/index.js
 var regenerator = __webpack_require__("k9sC");
 var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js
 var asyncToGenerator = __webpack_require__("yP/C");
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js + 1 modules
-var objectSpread = __webpack_require__("rNCn");
-
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/array/is-array.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/array/is-array.js
 var is_array = __webpack_require__("ysci");
 var is_array_default = /*#__PURE__*/__webpack_require__.n(is_array);
 
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/arrayWithHoles.js
 
 function _arrayWithHoles(arr) {
   if (is_array_default()(arr)) return arr;
 }
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/get-iterator.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/get-iterator.js
 var get_iterator = __webpack_require__("IVrg");
 var get_iterator_default = /*#__PURE__*/__webpack_require__.n(get_iterator);
 
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/iterableToArrayLimit.js
 
 function _iterableToArrayLimit(arr, i) {
   var _arr = [];
@@ -1590,18 +1605,18 @@ function _iterableToArrayLimit(arr, i) {
 
   return _arr;
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/nonIterableRest.js
 function _nonIterableRest() {
   throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js
 
 
 
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
 }
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js
 var taggedTemplateLiteral = __webpack_require__("2ewA");
 
 // EXTERNAL MODULE: external "styled-jsx/style"
@@ -1623,7 +1638,6 @@ var external_styled_components_ = __webpack_require__("Dtiu");
 var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
 
 // CONCATENATED MODULE: ./pages/index.js
-
 
 
 
@@ -1655,29 +1669,30 @@ var pages_Home = function Home(_ref) {
   var _useState = Object(external_react_["useState"])([]),
       _useState2 = _slicedToArray(_useState, 2),
       messages = _useState2[0],
-      setMessages = _useState2[1];
+      setMessages = _useState2[1]; // useEffect(() => {
+  //   const unsubscribe = firebase
+  //     .firestore()
+  //     .collection("messages")
+  //     .onSnapshot(snapshot => {
+  //       if (snapshot.size) {
+  //         // we have something
+  //         let updatedMessages = [];
+  //         snapshot.forEach(doc => {
+  //           updatedMessages.push({ ...doc.data() });
+  //         });
+  //         setMessages(p => updatedMessages);
+  //       } else {
+  //         // it's empty
+  //         console.log("ERROR!");
+  //       }
+  //     });
+  //   // handles the cleanup
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
 
-  Object(external_react_["useEffect"])(function () {
-    var unsubscribe = db["a" /* default */].firestore().collection("messages").onSnapshot(function (snapshot) {
-      if (snapshot.size) {
-        // we have something
-        var updatedMessages = [];
-        snapshot.forEach(function (doc) {
-          updatedMessages.push(Object(objectSpread["a" /* default */])({}, doc.data()));
-        });
-        setMessages(function (p) {
-          return updatedMessages;
-        });
-      } else {
-        // it's empty
-        console.log("ERROR!");
-      }
-    }); // handles the cleanup
 
-    return function () {
-      unsubscribe();
-    };
-  }, []);
   return external_react_default.a.createElement("div", {
     className: "jsx-3170664004"
   }, external_react_default.a.createElement("div", {
@@ -1727,7 +1742,7 @@ function () {
   var _ref3 = Object(asyncToGenerator["a" /* default */])(
   /*#__PURE__*/
   regenerator_default.a.mark(function _callee(_ref2) {
-    var pathname, req, res, pageProps, messages, message;
+    var pathname, req, res, pageProps, messages;
     return regenerator_default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
@@ -1743,39 +1758,35 @@ function () {
 
           case 3:
             pageProps = {};
-            messages = [];
-            _context.prev = 5;
-            _context.next = 8;
-            return db["a" /* default */].firestore().collection("messages").get().then(function (documentSet) {
-              documentSet.forEach(function (doc) {
-                messages.push(Object(objectSpread["a" /* default */])({
-                  id: doc.id
-                }, doc.data()));
-              });
-              pageProps = Object(objectSpread["a" /* default */])({}, pageProps, {
-                initialMessages: messages
-              });
-            });
+            messages = []; // try {
+            //   let message = await firebase
+            //     .firestore()
+            //     .collection("messages")
+            //     .get()
+            //     .then(documentSet => {
+            //       documentSet.forEach(doc => {
+            //         messages.push({
+            //           id: doc.id,
+            //           ...doc.data()
+            //         });
+            //       });
+            //       pageProps = {
+            //         ...pageProps,
+            //         initialMessages: messages
+            //       };
+            //     });
+            // } catch (err) {
+            //   console.log(err);
+            // }
 
-          case 8:
-            message = _context.sent;
-            _context.next = 14;
-            break;
-
-          case 11:
-            _context.prev = 11;
-            _context.t0 = _context["catch"](5);
-            console.log(_context.t0);
-
-          case 14:
             return _context.abrupt("return", pageProps);
 
-          case 15:
+          case 6:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[5, 11]]);
+    }, _callee);
   }));
 
   return function (_x) {
@@ -1937,6 +1948,13 @@ module.exports = require("core-js/library/fn/object/assign");
 
 /***/ }),
 
+/***/ "dN/k":
+/***/ (function(module, exports) {
+
+module.exports = require("next-absolute-url");
+
+/***/ }),
+
 /***/ "emby":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2069,23 +2087,23 @@ module.exports = require("next-server/dist/lib/router/router");
 
 "use strict";
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
 var get_own_property_descriptor = __webpack_require__("FIas");
 var get_own_property_descriptor_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptor);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
 var get_own_property_symbols = __webpack_require__("8k7s");
 var get_own_property_symbols_default = /*#__PURE__*/__webpack_require__.n(get_own_property_symbols);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/keys.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/keys.js
 var keys = __webpack_require__("TPw6");
 var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
+// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
 var define_property = __webpack_require__("LcAa");
 var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
 
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
 
 function _defineProperty(obj, key, value) {
   if (key in obj) {
@@ -2101,7 +2119,7 @@ function _defineProperty(obj, key, value) {
 
   return obj;
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/functions-nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js
+// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
 
 
@@ -2170,7 +2188,8 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 "use strict";
 // Initialize Firebase
-var firebase = __webpack_require__("wVQA");
+var firebase = __webpack_require__("wVQA"); // require("firebase/analytics");
+
 
 __webpack_require__("EuFW");
 
@@ -2180,20 +2199,43 @@ __webpack_require__("dCoW");
 
 __webpack_require__("ha8t");
 
-if (!firebase.apps.length) {
-  firebase.initializeApp({
-    apiKey: "AIzaSyBOhGIHYuIjGqqKDbF_JnEvdB-wXRMd9M",
-    authDomain: "follow-up-edge-backend.firebaseapp.com",
-    databaseURL: "https://follow-up-edge-backend.firebaseio.com",
-    projectId: "follow-up-edge-backend",
-    storageBucket: "follow-up-edge-backend.appspot.com",
-    messagingSenderId: "525694910604",
-    appId: "1:525694910604:web:7d802043ba78a9a83bfba9",
-    measurementId: "G-7M78EKCHFX"
-  });
-}
+var first, second;
 
-/* harmony default export */ __webpack_exports__["a"] = (firebase);
+var db = function db(url) {
+  if (!firebase.apps.length) {
+    first = firebase.initializeApp({
+      apiKey: "AIzaSyBOhGIHYuIjGqqKDbF_JnEvdB-wXRMd9Mk",
+      authDomain: "follow-up-edge-backend.firebaseapp.com",
+      databaseURL: "https://follow-up-edge-backend.firebaseio.com",
+      projectId: "follow-up-edge-backend",
+      storageBucket: "follow-up-edge-backend.appspot.com",
+      messagingSenderId: "525694910604",
+      appId: "1:525694910604:web:7d802043ba78a9a83bfba9",
+      measurementId: "G-7M78EKCHFX"
+    }, "first");
+    second = firebase.initializeApp({
+      apiKey: "AIzaSyAhu9Aptqfs6Q_xu9HS7jMvqpGcQkQCqT8",
+      authDomain: "wl-test-1.firebaseapp.com",
+      databaseURL: "https://wl-test-1.firebaseio.com",
+      projectId: "wl-test-1",
+      storageBucket: "wl-test-1.appspot.com",
+      messagingSenderId: "64946981609",
+      appId: "1:64946981609:web:a2335047c9e6c901113e78",
+      measurementId: "G-NMP46JDG1E"
+    }, "second"); // firebase.analytics();
+  } // return the appropriate object once all apps are initialized?
+
+
+  if (url == "us-central1-follow-up-edge-backend.cloudfunctions.net" || url == "localhost:5000") {
+    return first;
+  }
+
+  if (url == "us-central1-wl-test-1.cloudfunctions.net") {
+    return second;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (db);
 
 /***/ }),
 

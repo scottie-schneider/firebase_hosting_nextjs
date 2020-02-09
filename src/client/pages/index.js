@@ -13,28 +13,28 @@ const Home = ({ initialMessages }) => {
   const imageURL = "url";
   const [messages, setMessages] = useState([]);
 
-  useEffect(() => {
-    const unsubscribe = firebase
-      .firestore()
-      .collection("messages")
-      .onSnapshot(snapshot => {
-        if (snapshot.size) {
-          // we have something
-          let updatedMessages = [];
-          snapshot.forEach(doc => {
-            updatedMessages.push({ ...doc.data() });
-          });
-          setMessages(p => updatedMessages);
-        } else {
-          // it's empty
-          console.log("ERROR!");
-        }
-      });
-    // handles the cleanup
-    return () => {
-      unsubscribe();
-    };
-  }, []);
+  // useEffect(() => {
+  //   const unsubscribe = firebase
+  //     .firestore()
+  //     .collection("messages")
+  //     .onSnapshot(snapshot => {
+  //       if (snapshot.size) {
+  //         // we have something
+  //         let updatedMessages = [];
+  //         snapshot.forEach(doc => {
+  //           updatedMessages.push({ ...doc.data() });
+  //         });
+  //         setMessages(p => updatedMessages);
+  //       } else {
+  //         // it's empty
+  //         console.log("ERROR!");
+  //       }
+  //     });
+  //   // handles the cleanup
+  //   return () => {
+  //     unsubscribe();
+  //   };
+  // }, []);
 
   return (
     <div>
@@ -121,26 +121,26 @@ Home.getInitialProps = async ({ pathname, req, res }) => {
   }
   let pageProps = {};
   let messages = [];
-  try {
-    let message = await firebase
-      .firestore()
-      .collection("messages")
-      .get()
-      .then(documentSet => {
-        documentSet.forEach(doc => {
-          messages.push({
-            id: doc.id,
-            ...doc.data()
-          });
-        });
-        pageProps = {
-          ...pageProps,
-          initialMessages: messages
-        };
-      });
-  } catch (err) {
-    console.log(err);
-  }
+  // try {
+  //   let message = await firebase
+  //     .firestore()
+  //     .collection("messages")
+  //     .get()
+  //     .then(documentSet => {
+  //       documentSet.forEach(doc => {
+  //         messages.push({
+  //           id: doc.id,
+  //           ...doc.data()
+  //         });
+  //       });
+  //       pageProps = {
+  //         ...pageProps,
+  //         initialMessages: messages
+  //       };
+  //     });
+  // } catch (err) {
+  //   console.log(err);
+  // }
   return pageProps;
 };
 

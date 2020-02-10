@@ -17,11 +17,11 @@
   },
   "chunks": {
     "byName": {
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/_app.js": 0,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/_document.js": 1,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/_error.js": 2,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/about.js": 3,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/index.js": 4
+      "static/vWF8O6DaIditRIn2LVSsH/pages/_app.js": 0,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/_document.js": 1,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/_error.js": 2,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/about.js": 3,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/index.js": 4
     },
     "bySource": {},
     "usedIds": [

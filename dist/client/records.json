@@ -7,11 +7,11 @@
     "byName": {
       "commons": 0,
       "static/runtime/webpack.js": 1,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/_app.js": 2,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/_error.js": 3,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/about.js": 4,
-      "static/b_LLrt3uwehKuiv-y3d_O/pages/index.js": 5,
-      "static/runtime/main.js": 6
+      "static/runtime/main.js": 2,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/_app.js": 3,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/_error.js": 4,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/about.js": 5,
+      "static/vWF8O6DaIditRIn2LVSsH/pages/index.js": 6
     },
     "bySource": {},
     "usedIds": [

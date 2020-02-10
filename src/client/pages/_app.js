@@ -19,7 +19,7 @@ export default class MyApp extends App {
     };
 
     try {
-      await db("us-central1-wl-test-1.cloudfunctions.net")
+      await db(absolute.host)
         .firestore()
         .collection("tenant")
         .limit(1)
@@ -38,9 +38,17 @@ export default class MyApp extends App {
             tenantObject = doc.data();
           });
         })
-        .catch(err => console.log(err));
+        .catch(err => {
+          tenantObject = {
+            tagline: "there is an error inside catch",
+            imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+          }
+        });
     } catch (err) {
-      console.log("error!", err);
+      tenantObject = {
+        tagline: err,
+        imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+      }
     }
 
     if (Component.getInitialProps) {

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -113,15 +113,15 @@ module.exports = require("core-js/library/fn/object/get-prototype-of");
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol/iterator.js
 var iterator = __webpack_require__("45mK");
 var iterator_default = /*#__PURE__*/__webpack_require__.n(iterator);
 
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol.js
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/symbol.js
 var symbol = __webpack_require__("Gozm");
 var symbol_default = /*#__PURE__*/__webpack_require__.n(symbol);
 
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js
+// CONCATENATED MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/typeof.js
 
 
 
@@ -140,7 +140,7 @@ function typeof_typeof(obj) {
 
   return typeof_typeof(obj);
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js
+// CONCATENATED MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/assertThisInitialized.js
 function _assertThisInitialized(self) {
   if (self === void 0) {
     throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
@@ -148,7 +148,7 @@ function _assertThisInitialized(self) {
 
   return self;
 }
-// CONCATENATED MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js
+// CONCATENATED MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _possibleConstructorReturn; });
 
 
@@ -206,10 +206,398 @@ function _construct(Parent, args, Class) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 0:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__("Juyh");
+module.exports = __webpack_require__("1TCz");
+
+
+/***/ }),
+
+/***/ "1TCz":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/regenerator/index.js
+var regenerator = __webpack_require__("k9sC");
+var regenerator_default = /*#__PURE__*/__webpack_require__.n(regenerator);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/asyncToGenerator.js
+var asyncToGenerator = __webpack_require__("yP/C");
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/classCallCheck.js
+var classCallCheck = __webpack_require__("h7sq");
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/createClass.js
+var createClass = __webpack_require__("tS02");
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js + 2 modules
+var possibleConstructorReturn = __webpack_require__("/XES");
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js
+var getPrototypeOf = __webpack_require__("ztBH");
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js
+var inherits = __webpack_require__("Fayl");
+
+// EXTERNAL MODULE: external "react"
+var external_react_ = __webpack_require__("cDcd");
+var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/next/app.js
+var app = __webpack_require__("Khd+");
+var app_default = /*#__PURE__*/__webpack_require__.n(app);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js
+var taggedTemplateLiteral = __webpack_require__("2ewA");
+
+// EXTERNAL MODULE: external "next/head"
+var head_ = __webpack_require__("xnum");
+var head_default = /*#__PURE__*/__webpack_require__.n(head_);
+
+// CONCATENATED MODULE: ./components/Head.js
+
+
+
+
+/* harmony default export */ var Head = (function () {
+  // const { tagline } = useContext(TenantContext);
+  return external_react_default.a.createElement(head_default.a, null, external_react_default.a.createElement("title", null, "hi"), external_react_default.a.createElement("meta", {
+    name: "viewport",
+    content: "width=device-width,initial-scale=1"
+  }), external_react_default.a.createElement("meta", {
+    charSet: "utf-8"
+  }), external_react_default.a.createElement("meta", {
+    name: "description",
+    content: "test"
+  }), external_react_default.a.createElement("link", {
+    href: "https://fonts.googleapis.com/icon?family=Material+Icons",
+    rel: "stylesheet"
+  }));
+});
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js + 1 modules
+var objectSpread = __webpack_require__("rNCn");
+
+// EXTERNAL MODULE: external "styled-jsx/style"
+var style_ = __webpack_require__("HJQg");
+var style_default = /*#__PURE__*/__webpack_require__.n(style_);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/next/link.js
+var next_link = __webpack_require__("jvFD");
+var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
+
+// CONCATENATED MODULE: ./components/Nav.js
+
+
+
+
+var links = [{
+  href: 'https://zeit.co/now',
+  label: 'ZEIT'
+}, {
+  href: 'https://github.com/zeit/next.js',
+  label: 'GitHub'
+}].map(function (link) {
+  return Object(objectSpread["a" /* default */])({}, link, {
+    key: "nav-link-".concat(link.href, "-").concat(link.label)
+  });
+});
+
+var Nav_Nav = function Nav() {
+  return external_react_default.a.createElement("nav", {
+    className: "jsx-2055897931"
+  }, external_react_default.a.createElement("ul", {
+    className: "jsx-2055897931"
+  }, external_react_default.a.createElement("li", {
+    className: "jsx-2055897931"
+  }, external_react_default.a.createElement(link_default.a, {
+    href: "/"
+  }, external_react_default.a.createElement("a", {
+    className: "jsx-2055897931"
+  }, "Home"))), links.map(function (_ref) {
+    var key = _ref.key,
+        href = _ref.href,
+        label = _ref.label;
+    return external_react_default.a.createElement("li", {
+      key: key,
+      className: "jsx-2055897931"
+    }, external_react_default.a.createElement("a", {
+      href: href,
+      className: "jsx-2055897931"
+    }, label));
+  })), external_react_default.a.createElement(style_default.a, {
+    id: "2055897931"
+  }, ["body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Avenir Next,Avenir, Helvetica,sans-serif;}", "nav.jsx-2055897931{text-align:center;}", "ul.jsx-2055897931{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-webkit-justify-content:space-between;-ms-flex-pack:justify;justify-content:space-between;}", "nav.jsx-2055897931>ul.jsx-2055897931{padding:4px 16px;}", "li.jsx-2055897931{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;padding:6px 8px;}", "a.jsx-2055897931{color:#067df7;-webkit-text-decoration:none;text-decoration:none;font-size:13px;}"]));
+};
+
+/* harmony default export */ var components_Nav = (Nav_Nav);
+// EXTERNAL MODULE: external "styled-components"
+var external_styled_components_ = __webpack_require__("Dtiu");
+var external_styled_components_default = /*#__PURE__*/__webpack_require__.n(external_styled_components_);
+
+// CONCATENATED MODULE: ./components/Footer.js
+
+
+
+function _templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])([""]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var StyledFooter = external_styled_components_default.a.footer(_templateObject());
+/* harmony default export */ var Footer = (function () {
+  return external_react_default.a.createElement(StyledFooter, null, "This is the footer");
+});
+// CONCATENATED MODULE: ./components/Page.js
+
+
+
+
+function _templateObject3() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n    /* background: ", "; */\n    background: white;\n    color: ", ";\n    display: grid;\n    min-height: 100vh;\n    grid-template-rows: auto 1fr auto;\n  "]);
+
+  _templateObject3 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  html {\n    box-sizing: border-box;\n    font-size: 10px;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  html, body {\n    height: 100%;\n  }\n\n  .content {\n    flex: 1 0 auto;\n  }\n  .footer {\n    flex-shrink: 0;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function Page_templateObject() {
+  var data = Object(taggedTemplateLiteral["a" /* default */])(["\n  max-width: ", ";\n  margin: 0 auto;\n  padding: 2rem;\n"]);
+
+  Page_templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+
+
+
+
+var Inner = external_styled_components_default.a.div(Page_templateObject(), function (props) {
+  return props.theme.maxWidth;
+});
+var GlobalStyles = Object(external_styled_components_["createGlobalStyle"])(_templateObject2());
+
+var Page_Page = function Page(_ref) {
+  var children = _ref.children;
+  var theme = {
+    red: "#000",
+    image: null,
+    grey: "#3A3A3A",
+    lightgrey: "#E1E1E1",
+    offWhite: "#EDEDED",
+    maxWidth: "1000px",
+    bs: "0 12px 24px 0 rgba(0, 0, 0, 0.09)"
+  };
+  var StyledPage = external_styled_components_default.a.div(_templateObject3(), function (props) {
+    return props.theme.red;
+  }, function (props) {
+    return props.theme.black;
+  });
+  return external_react_default.a.createElement(external_styled_components_["ThemeProvider"], {
+    theme: theme
+  }, external_react_default.a.createElement(StyledPage, null, external_react_default.a.createElement(GlobalStyles, null), external_react_default.a.createElement(Head, null), external_react_default.a.createElement(components_Nav, null), external_react_default.a.createElement(Inner, {
+    className: "content"
+  }, children), external_react_default.a.createElement(Footer, {
+    className: "footer"
+  })));
+};
+
+Page_Page.getInitialProps =
+/*#__PURE__*/
+function () {
+  var _ref3 = Object(asyncToGenerator["a" /* default */])(
+  /*#__PURE__*/
+  regenerator_default.a.mark(function _callee(_ref2) {
+    var pathname, req, res, pageProps;
+    return regenerator_default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            pathname = _ref2.pathname, req = _ref2.req, res = _ref2.res;
+            pageProps = {};
+
+          case 2:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function (_x) {
+    return _ref3.apply(this, arguments);
+  };
+}();
+
+/* harmony default export */ var components_Page = (Page_Page);
+// EXTERNAL MODULE: ./lib/db.js
+var db = __webpack_require__("u1Fb");
+
+// EXTERNAL MODULE: external "next-absolute-url"
+var external_next_absolute_url_ = __webpack_require__("dN/k");
+var external_next_absolute_url_default = /*#__PURE__*/__webpack_require__.n(external_next_absolute_url_);
+
+// CONCATENATED MODULE: ./pages/_app.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TenantContext", function() { return TenantContext; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _app_MyApp; });
+
+
+
+
+
+
+
+
+
+
+
+
+var TenantContext = Object(external_react_["createContext"])(null);
+
+
+var _app_MyApp =
+/*#__PURE__*/
+function (_App) {
+  Object(inherits["default"])(MyApp, _App);
+
+  function MyApp() {
+    Object(classCallCheck["default"])(this, MyApp);
+
+    return Object(possibleConstructorReturn["default"])(this, Object(getPrototypeOf["default"])(MyApp).apply(this, arguments));
+  }
+
+  Object(createClass["default"])(MyApp, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          Component = _this$props.Component,
+          pageProps = _this$props.pageProps,
+          tenantObject = _this$props.tenantObject,
+          url = _this$props.url;
+      return external_react_default.a.createElement(TenantContext.Provider, {
+        value: tenantObject
+      }, external_react_default.a.createElement(components_Page, {
+        tenantObject: tenantObject
+      }, external_react_default.a.createElement(Component, pageProps)));
+    }
+  }], [{
+    key: "getInitialProps",
+    value: function () {
+      var _getInitialProps = Object(asyncToGenerator["a" /* default */])(
+      /*#__PURE__*/
+      regenerator_default.a.mark(function _callee(_ref) {
+        var Component, router, ctx, absolute, pageProps, tenantObject, url, headersHost;
+        return regenerator_default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                Component = _ref.Component, router = _ref.router, ctx = _ref.ctx;
+                absolute = external_next_absolute_url_default()(ctx.req);
+                pageProps = {}; // fallback tenant object used as a default
+
+                tenantObject = {
+                  tagline: "Didn't find a url",
+                  imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+                };
+                _context.prev = 4;
+                _context.next = 7;
+                return Object(db["a" /* default */])(absolute.host).firestore().collection("tenant").limit(1).get().then(function (docs) {
+                  if (docs.empty) {
+                    tenantObject = {
+                      tagline: "no doc found",
+                      imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+                    };
+                    return;
+                  }
+
+                  docs.forEach(function (doc) {
+                    console.log(doc.id, doc.data());
+                    tenantObject = doc.data();
+                  });
+                })["catch"](function (err) {
+                  tenantObject = {
+                    tagline: "there is an error inside catch",
+                    imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+                  };
+                });
+
+              case 7:
+                _context.next = 12;
+                break;
+
+              case 9:
+                _context.prev = 9;
+                _context.t0 = _context["catch"](4);
+                tenantObject = {
+                  tagline: _context.t0,
+                  imageURL: "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg"
+                };
+
+              case 12:
+                if (!Component.getInitialProps) {
+                  _context.next = 16;
+                  break;
+                }
+
+                _context.next = 15;
+                return Component.getInitialProps(ctx);
+
+              case 15:
+                pageProps = _context.sent;
+
+              case 16:
+                url = absolute;
+                headersHost = ctx.req.headers.host;
+                return _context.abrupt("return", {
+                  pageProps: pageProps,
+                  tenantObject: tenantObject,
+                  url: url,
+                  headersHost: headersHost
+                });
+
+              case 19:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, null, [[4, 9]]);
+      }));
+
+      function getInitialProps(_x) {
+        return _getInitialProps.apply(this, arguments);
+      }
+
+      return getInitialProps;
+    }()
+  }]);
+
+  return MyApp;
+}(app_default.a);
+
 
 
 /***/ }),
@@ -279,6 +667,31 @@ function withRouter(ComposedComponent) {
   if (false) { var name; }
 
   return WithRouteWrapper;
+}
+
+/***/ }),
+
+/***/ "2ewA":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _taggedTemplateLiteral; });
+/* harmony import */ var _core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("emby");
+/* harmony import */ var _core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("v0mK");
+/* harmony import */ var _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1__);
+
+
+function _taggedTemplateLiteral(strings, raw) {
+  if (!raw) {
+    raw = strings.slice(0);
+  }
+
+  return _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1___default()(_core_js_object_define_properties__WEBPACK_IMPORTED_MODULE_0___default()(strings, {
+    raw: {
+      value: _core_js_object_freeze__WEBPACK_IMPORTED_MODULE_1___default()(raw)
+    }
+  }));
 }
 
 /***/ }),
@@ -511,10 +924,31 @@ function makePublicRouterInstance(router) {
 
 /***/ }),
 
+/***/ "8k7s":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("k1wZ");
+
+/***/ }),
+
 /***/ "9uuC":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("aAV7");
+
+/***/ }),
+
+/***/ "Dtiu":
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
+
+/***/ }),
+
+/***/ "EuFW":
+/***/ (function(module, exports) {
+
+module.exports = require("firebase/auth");
 
 /***/ }),
 
@@ -553,6 +987,13 @@ function _inherits(subClass, superClass) {
 
 /***/ }),
 
+/***/ "Gf4D":
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/freeze");
+
+/***/ }),
+
 /***/ "Gozm":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -560,58 +1001,203 @@ module.exports = __webpack_require__("vqFK");
 
 /***/ }),
 
+/***/ "HJQg":
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
+
+/***/ }),
+
+/***/ "HaU7":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault2 = __webpack_require__("lpv4");
+
+var _classCallCheck2 = _interopRequireDefault2(__webpack_require__("h7sq"));
+
+var _createClass2 = _interopRequireDefault2(__webpack_require__("tS02"));
+
+var _possibleConstructorReturn2 = _interopRequireDefault2(__webpack_require__("/XES"));
+
+var _getPrototypeOf2 = _interopRequireDefault2(__webpack_require__("ztBH"));
+
+var _inherits2 = _interopRequireDefault2(__webpack_require__("Fayl"));
+
+var _regenerator = _interopRequireDefault2(__webpack_require__("k9sC"));
+
+var _interopRequireDefault = __webpack_require__("lpv4");
+
+exports.__esModule = true;
+exports.Container = Container;
+exports.createUrl = createUrl;
+exports["default"] = void 0;
+
+var _extends2 = _interopRequireDefault(__webpack_require__("uFB0"));
+
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__("WWUj"));
+
+var _react = _interopRequireDefault(__webpack_require__("cDcd"));
+
+var _propTypes = _interopRequireDefault(__webpack_require__("rf6O"));
+
+var _utils = __webpack_require__("p8BD");
+
+exports.AppInitialProps = _utils.AppInitialProps;
+
+var _router = __webpack_require__("7xIC");
+/**
+* `App` component is used for initialize of pages. It allows for overwriting and full control of the `page` initialization.
+* This allows for keeping state between navigation, custom error handling, injecting additional data.
+*/
+
+
+function appGetInitialProps(_x) {
+  return _appGetInitialProps.apply(this, arguments);
+}
+
+function _appGetInitialProps() {
+  _appGetInitialProps = (0, _asyncToGenerator2["default"])(
+  /*#__PURE__*/
+  _regenerator["default"].mark(function _callee(_ref) {
+    var Component, ctx, pageProps;
+    return _regenerator["default"].wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            Component = _ref.Component, ctx = _ref.ctx;
+            _context.next = 3;
+            return (0, _utils.loadGetInitialProps)(Component, ctx);
+
+          case 3:
+            pageProps = _context.sent;
+            return _context.abrupt("return", {
+              pageProps: pageProps
+            });
+
+          case 5:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+  return _appGetInitialProps.apply(this, arguments);
+}
+
+var App =
+/*#__PURE__*/
+function (_react$default$Compon) {
+  (0, _inherits2["default"])(App, _react$default$Compon);
+
+  function App() {
+    (0, _classCallCheck2["default"])(this, App);
+    return (0, _possibleConstructorReturn2["default"])(this, (0, _getPrototypeOf2["default"])(App).apply(this, arguments));
+  }
+
+  (0, _createClass2["default"])(App, [{
+    key: "getChildContext",
+    value: function getChildContext() {
+      return {
+        router: (0, _router.makePublicRouterInstance)(this.props.router)
+      };
+    } // Kept here for backwards compatibility.
+    // When someone ended App they could call `super.componentDidCatch`.
+    // @deprecated This method is no longer needed. Errors are caught at the top level
+
+  }, {
+    key: "componentDidCatch",
+    value: function componentDidCatch(error, _errorInfo) {
+      throw error;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          router = _this$props.router,
+          Component = _this$props.Component,
+          pageProps = _this$props.pageProps;
+      var url = createUrl(router);
+      return _react["default"].createElement(Container, null, _react["default"].createElement(Component, (0, _extends2["default"])({}, pageProps, {
+        url: url
+      })));
+    }
+  }]);
+  return App;
+}(_react["default"].Component); // @deprecated noop for now until removal
+
+
+exports["default"] = App;
+App.childContextTypes = {
+  router: _propTypes["default"].object
+};
+App.origGetInitialProps = appGetInitialProps;
+App.getInitialProps = appGetInitialProps;
+
+function Container(p) {
+  return p.children;
+}
+
+var warnUrl = (0, _utils.execOnce)(function () {
+  if (false) {}
+});
+
+function createUrl(router) {
+  // This is to make sure we don't references the router object at call time
+  var pathname = router.pathname,
+      asPath = router.asPath,
+      query = router.query;
+  return {
+    get query() {
+      warnUrl();
+      return query;
+    },
+
+    get pathname() {
+      warnUrl();
+      return pathname;
+    },
+
+    get asPath() {
+      warnUrl();
+      return asPath;
+    },
+
+    back: function back() {
+      warnUrl();
+      router.back();
+    },
+    push: function push(url, as) {
+      warnUrl();
+      return router.push(url, as);
+    },
+    pushTo: function pushTo(href, as) {
+      warnUrl();
+      var pushRoute = as ? href : '';
+      var pushUrl = as || href;
+      return router.push(pushRoute, pushUrl);
+    },
+    replace: function replace(url, as) {
+      warnUrl();
+      return router.replace(url, as);
+    },
+    replaceTo: function replaceTo(href, as) {
+      warnUrl();
+      var replaceRoute = as ? href : '';
+      var replaceUrl = as || href;
+      return router.replace(replaceRoute, replaceUrl);
+    }
+  };
+}
+
+/***/ }),
+
 /***/ "JeHL":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("Xql+");
-
-/***/ }),
-
-/***/ "Juyh":
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__("cDcd");
-var external_react_default = /*#__PURE__*/__webpack_require__.n(external_react_);
-
-// EXTERNAL MODULE: /Users/scottie/Projects/firebase/firebase_hosting_nextjs/node_modules/next/link.js
-var next_link = __webpack_require__("jvFD");
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-
-// CONCATENATED MODULE: ./components/Header.js
-
-
-/* harmony default export */ var Header = (function (_ref) {
-  var pathname = _ref.pathname;
-  return external_react_default.a.createElement("header", null, external_react_default.a.createElement(link_default.a, {
-    href: "/"
-  }, external_react_default.a.createElement("a", {
-    className: pathname === "/" ? "is-active" : ""
-  }, "Home")), external_react_default.a.createElement(link_default.a, {
-    href: "/about"
-  }, external_react_default.a.createElement("a", {
-    className: pathname === "/about" ? "is-active" : ""
-  }, "About")));
-});
-// CONCATENATED MODULE: ./components/App.js
-
-
-
-var App_App = function App(_ref) {
-  var children = _ref.children;
-  return external_react_default.a.createElement("main", null, external_react_default.a.createElement(Header, null), children);
-};
-
-/* harmony default export */ var components_App = (App_App);
-// CONCATENATED MODULE: ./pages/about.js
-
-
-/* harmony default export */ var about = __webpack_exports__["default"] = (function () {
-  return external_react_default.a.createElement(components_App, null, external_react_default.a.createElement("p", null, "Next.js About Page"));
-});
 
 /***/ }),
 
@@ -903,10 +1489,25 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ "Khd+":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("HaU7")
+
+
+/***/ }),
+
 /***/ "LcAa":
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("TUA0");
+
+/***/ }),
+
+/***/ "Ml6p":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("aC71");
 
 /***/ }),
 
@@ -936,6 +1537,13 @@ function _setPrototypeOf(o, p) {
 
 /***/ }),
 
+/***/ "TPw6":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("qJj/");
+
+/***/ }),
+
 /***/ "TUA0":
 /***/ (function(module, exports) {
 
@@ -954,6 +1562,51 @@ module.exports = __webpack_require__("o5io");
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__("Wk4r");
+
+/***/ }),
+
+/***/ "WWUj":
+/***/ (function(module, exports, __webpack_require__) {
+
+var _Promise = __webpack_require__("Ml6p");
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    _Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new _Promise(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
+
+module.exports = _asyncToGenerator;
 
 /***/ }),
 
@@ -985,6 +1638,20 @@ module.exports = require("core-js/library/fn/reflect/construct");
 
 /***/ }),
 
+/***/ "aC71":
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/promise");
+
+/***/ }),
+
+/***/ "bnmT":
+/***/ (function(module, exports) {
+
+module.exports = require("firebase/firestore");
+
+/***/ }),
+
 /***/ "bzos":
 /***/ (function(module, exports) {
 
@@ -999,10 +1666,38 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ "cu1A":
+/***/ (function(module, exports) {
+
+module.exports = require("regenerator-runtime");
+
+/***/ }),
+
+/***/ "dCoW":
+/***/ (function(module, exports) {
+
+module.exports = require("firebase/functions");
+
+/***/ }),
+
 /***/ "dGr4":
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/object/assign");
+
+/***/ }),
+
+/***/ "dN/k":
+/***/ (function(module, exports) {
+
+module.exports = require("next-absolute-url");
+
+/***/ }),
+
+/***/ "emby":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("ltjX");
 
 /***/ }),
 
@@ -1027,6 +1722,13 @@ function _classCallCheck(instance, Constructor) {
 
 /***/ }),
 
+/***/ "ha8t":
+/***/ (function(module, exports) {
+
+module.exports = require("firebase/storage");
+
+/***/ }),
+
 /***/ "jPfo":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1042,6 +1744,21 @@ module.exports = __webpack_require__("KeDb")
 
 /***/ }),
 
+/***/ "k1wZ":
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/get-own-property-symbols");
+
+/***/ }),
+
+/***/ "k9sC":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("cu1A");
+
+
+/***/ }),
+
 /***/ "lpv4":
 /***/ (function(module, exports) {
 
@@ -1052,6 +1769,13 @@ function _interopRequireDefault(obj) {
 }
 
 module.exports = _interopRequireDefault;
+
+/***/ }),
+
+/***/ "ltjX":
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/define-properties");
 
 /***/ }),
 
@@ -1083,10 +1807,82 @@ module.exports = require("next-server/dist/lib/request-context");
 
 /***/ }),
 
+/***/ "qJj/":
+/***/ (function(module, exports) {
+
+module.exports = require("core-js/library/fn/object/keys");
+
+/***/ }),
+
 /***/ "qxCs":
 /***/ (function(module, exports) {
 
 module.exports = require("next-server/dist/lib/router/router");
+
+/***/ }),
+
+/***/ "rNCn":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-descriptor.js
+var get_own_property_descriptor = __webpack_require__("FIas");
+var get_own_property_descriptor_default = /*#__PURE__*/__webpack_require__.n(get_own_property_descriptor);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/get-own-property-symbols.js
+var get_own_property_symbols = __webpack_require__("8k7s");
+var get_own_property_symbols_default = /*#__PURE__*/__webpack_require__.n(get_own_property_symbols);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/keys.js
+var keys = __webpack_require__("TPw6");
+var keys_default = /*#__PURE__*/__webpack_require__.n(keys);
+
+// EXTERNAL MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/core-js/object/define-property.js
+var define_property = __webpack_require__("LcAa");
+var define_property_default = /*#__PURE__*/__webpack_require__.n(define_property);
+
+// CONCATENATED MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/defineProperty.js
+
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    define_property_default()(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+// CONCATENATED MODULE: /Users/scottschneider/Projects/firebase/firebase_hosting_nextjs/node_modules/@babel/runtime-corejs2/helpers/esm/objectSpread.js
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _objectSpread; });
+
+
+
+
+function _objectSpread(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    var ownKeys = keys_default()(source);
+
+    if (typeof get_own_property_symbols_default.a === 'function') {
+      ownKeys = ownKeys.concat(get_own_property_symbols_default()(source).filter(function (sym) {
+        return get_own_property_descriptor_default()(source, sym).enumerable;
+      }));
+    }
+
+    ownKeys.forEach(function (key) {
+      _defineProperty(target, key, source[key]);
+    });
+  }
+
+  return target;
+}
 
 /***/ }),
 
@@ -1126,6 +1922,118 @@ function _createClass(Constructor, protoProps, staticProps) {
 
 /***/ }),
 
+/***/ "u1Fb":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// Initialize Firebase
+var firebase = __webpack_require__("wVQA"); // require("firebase/analytics");
+
+
+__webpack_require__("EuFW");
+
+__webpack_require__("bnmT");
+
+__webpack_require__("dCoW");
+
+__webpack_require__("ha8t");
+
+var db = function db(url) {
+  if (url == "us-central1-follow-up-edge-backend.cloudfunctions.net") {
+    try {
+      var config = {
+        apiKey: "AIzaSyBOhGIHYuIjGqqKDbF_JnEvdB-wXRMd9Mk",
+        authDomain: "follow-up-edge-backend.firebaseapp.com",
+        databaseURL: "https://follow-up-edge-backend.firebaseio.com",
+        projectId: "follow-up-edge-backend",
+        storageBucket: "follow-up-edge-backend.appspot.com",
+        messagingSenderId: "525694910604",
+        appId: "1:525694910604:web:7d802043ba78a9a83bfba9",
+        measurementId: "G-7M78EKCHFX"
+      };
+      firebase.initializeApp(config);
+    } catch (err) {
+      // we skip the "already exists" message which is
+      // not an actual error when we're hot-reloading
+      if (!/already exists/.test(err.message)) {
+        console.error('Firebase initialization error', err.stack);
+      }
+    }
+
+    return firebase;
+  } else if (url == "us-central1-wl-test-1.cloudfunctions.net") {
+    try {
+      var _config = {
+        apiKey: "AIzaSyAhu9Aptqfs6Q_xu9HS7jMvqpGcQkQCqT8",
+        authDomain: "wl-test-1.firebaseapp.com",
+        databaseURL: "https://wl-test-1.firebaseio.com",
+        projectId: "wl-test-1",
+        storageBucket: "wl-test-1.appspot.com",
+        messagingSenderId: "64946981609",
+        appId: "1:64946981609:web:a2335047c9e6c901113e78",
+        measurementId: "G-NMP46JDG1E"
+      };
+      firebase.initializeApp(_config);
+    } catch (err) {
+      // we skip the "already exists" message which is
+      // not an actual error when we're hot-reloading
+      if (!/already exists/.test(err.message)) {
+        console.error('Firebase initialization error', err.stack);
+      }
+    }
+
+    return firebase;
+  } else if (url == "us-central1-wl-test-2.cloudfunctions.net") {
+    try {
+      var _config2 = {
+        aapiKey: "AIzaSyDBqMCfoeBFJ2DSRrKfzTPE4ksx4dpWSqo",
+        authDomain: "wl-test-2.firebaseapp.com",
+        databaseURL: "https://wl-test-2.firebaseio.com",
+        projectId: "wl-test-2",
+        storageBucket: "wl-test-2.appspot.com",
+        messagingSenderId: "751680463981",
+        appId: "1:751680463981:web:ae8b744055e8afdf0acb64",
+        measurementId: "G-E4Q5CXWJ2J"
+      };
+      firebase.initializeApp(_config2);
+    } catch (err) {
+      // we skip the "already exists" message which is
+      // not an actual error when we're hot-reloading
+      if (!/already exists/.test(err.message)) {
+        console.error('Firebase initialization error', err.stack);
+      }
+    }
+
+    return firebase;
+  } else {
+    try {
+      var _config3 = {
+        apiKey: "AIzaSyBOhGIHYuIjGqqKDbF_JnEvdB-wXRMd9Mk",
+        authDomain: "follow-up-edge-backend.firebaseapp.com",
+        databaseURL: "https://follow-up-edge-backend.firebaseio.com",
+        projectId: "follow-up-edge-backend",
+        storageBucket: "follow-up-edge-backend.appspot.com",
+        messagingSenderId: "525694910604",
+        appId: "1:525694910604:web:7d802043ba78a9a83bfba9",
+        measurementId: "G-7M78EKCHFX"
+      };
+      firebase.initializeApp(_config3);
+    } catch (err) {
+      // we skip the "already exists" message which is
+      // not an actual error when we're hot-reloading
+      if (!/already exists/.test(err.message)) {
+        console.error('Firebase initialization error', err.stack);
+      }
+    }
+
+    return firebase;
+  }
+};
+
+/* harmony default export */ __webpack_exports__["a"] = (db);
+
+/***/ }),
+
 /***/ "uFB0":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1153,10 +2061,78 @@ module.exports = _extends;
 
 /***/ }),
 
+/***/ "v0mK":
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__("Gf4D");
+
+/***/ }),
+
 /***/ "vqFK":
 /***/ (function(module, exports) {
 
 module.exports = require("core-js/library/fn/symbol");
+
+/***/ }),
+
+/***/ "wVQA":
+/***/ (function(module, exports) {
+
+module.exports = require("firebase/app");
+
+/***/ }),
+
+/***/ "xnum":
+/***/ (function(module, exports) {
+
+module.exports = require("next/head");
+
+/***/ }),
+
+/***/ "yP/C":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _asyncToGenerator; });
+/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("Ml6p");
+/* harmony import */ var _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_promise__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  try {
+    var info = gen[key](arg);
+    var value = info.value;
+  } catch (error) {
+    reject(error);
+    return;
+  }
+
+  if (info.done) {
+    resolve(value);
+  } else {
+    _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+  return function () {
+    var self = this,
+        args = arguments;
+    return new _core_js_promise__WEBPACK_IMPORTED_MODULE_0___default.a(function (resolve, reject) {
+      var gen = fn.apply(self, args);
+
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+
+      function _throw(err) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err);
+      }
+
+      _next(undefined);
+    });
+  };
+}
 
 /***/ }),
 

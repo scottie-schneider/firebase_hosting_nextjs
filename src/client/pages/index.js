@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import firebase from "../lib/db";
+// import firebase from "../lib/db";
 import { TenantContext } from "./_app";
 import styled from "styled-components";
 
@@ -8,9 +8,7 @@ const StyledImage = styled.img`
   height: 200px;
 `;
 const Home = ({ initialMessages }) => {
-  // const { tagline, imageURL } = useContext(TenantContext);
-  const tagline = "hardcoded";
-  const imageURL = "url";
+  const { tagline, imageURL } = useContext(TenantContext);  
   const [messages, setMessages] = useState([]);
 
   // useEffect(() => {

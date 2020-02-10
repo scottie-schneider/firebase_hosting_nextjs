@@ -14,7 +14,8 @@
     "watch": "yarn watch:client & yarn watch:server",
     "serve": "cross-env NODE_ENV=production yarn firebase serve --only functions,hosting",
     "predeploy": "rimraf dist/ && yarn build",
-    "deploy": "yarn firebase deploy --only functions,hosting"
+    "deploy": "yarn firebase deploy --only functions,hosting",
+    "deploy:hosting": "yarn firebase deploy --only hosting"
   },
   "engines": {
     "node": "10"

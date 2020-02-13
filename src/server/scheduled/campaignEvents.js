@@ -33,16 +33,20 @@ module.exports = {
     const client = require("twilio")(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN) // Look for all the pendingEvents in the database who's time is due
     // send texts
     const sendText = (event) => {
-      return client.messages
-        .create({
-          body: message,
-          from: "+18433766861",
-          to: "+15128176776",
-        })
-        .then((message) => console.log(message.sid))
-        .catch((e) => {
-          console.error("Got an error:", e.code, e.message)
-        })
+      try {
+        client.messages
+          .create({
+            body: event.message,
+            from: "+18433766861",
+            to: "+15128176776",
+          })
+          .then((message) => console.log(message.sid))
+          .catch((e) => {
+            console.error("Got an error:", e.code, e.message)
+          })
+      } catch (err) {
+        console.log(err)
+      }
     }
 
     const sendEmail = (event) => {
@@ -71,20 +75,20 @@ module.exports = {
       console.log(time)
 
       pendingEvents.forEach((event) => {
-        batch.update(eventsRef.doc(event.id), {
+        eventsRef.doc(event.id).update({
           didRun: true,
         })
-        const { type } = event.data() // run the text on them
+        const eventData = event.data() // run the text on them
 
-        switch (type) {
+        switch (eventData.type) {
           case "text":
-            sendText(event)
+            sendText(eventData)
             break
           case "email":
-            sendEmail(event)
+            sendEmail(eventData)
             break
           case "rvm":
-            sendRVM(event)
+            sendRVM(eventData)
             break
         }
       })

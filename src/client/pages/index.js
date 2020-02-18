@@ -1,46 +1,50 @@
-import React, { useState, useEffect, useContext } from "react";
-// import firebase from "../lib/db";
-import { TenantContext } from "./_app";
-import styled from "styled-components";
+import React, { useState, useEffect, useContext } from "react"
+import db from "../lib/db"
+import { TenantContext } from "./_app"
+import styled from "styled-components"
+import absoluteUrl from "next-absolute-url"
 
 const StyledImage = styled.img`
   width: 200px;
   height: 200px;
-`;
+`
 const Home = ({ initialMessages }) => {
-  const { tagline, imageURL } = useContext(TenantContext);  
-  const [messages, setMessages] = useState([]);
+  const {
+    value: { tagline, imageURL },
+  } = useContext(TenantContext)
+  const { db: db } = useContext(TenantContext)
+  const [messages, setMessages] = useState([])
 
-  // useEffect(() => {
-  //   const unsubscribe = firebase
-  //     .firestore()
-  //     .collection("messages")
-  //     .onSnapshot(snapshot => {
-  //       if (snapshot.size) {
-  //         // we have something
-  //         let updatedMessages = [];
-  //         snapshot.forEach(doc => {
-  //           updatedMessages.push({ ...doc.data() });
-  //         });
-  //         setMessages(p => updatedMessages);
-  //       } else {
-  //         // it's empty
-  //         console.log("ERROR!");
-  //       }
-  //     });
-  //   // handles the cleanup
-  //   return () => {
-  //     unsubscribe();
-  //   };
-  // }, []);
+  useEffect(() => {
+    const unsubscribe = db
+      .firestore()
+      .collection("messages")
+      .onSnapshot((snapshot) => {
+        if (snapshot.size) {
+          // we have something
+          let updatedMessages = []
+          snapshot.forEach((doc) => {
+            updatedMessages.push({ id: doc.id, ...doc.data() })
+          })
+          setMessages((p) => updatedMessages)
+        } else {
+          // it's empty
+          console.log("ERROR!")
+        }
+      })
+    // handles the cleanup
+    return () => {
+      unsubscribe()
+    }
+  }, [])
 
   return (
     <div>
       <div className="hero">
         <h1 className="title">{tagline}</h1>
         <p className="description">
-          {messages.map(message => (
-            <p key={message.id}>{message.uppercase}</p>
+          {messages.map((message) => (
+            <p key={message.id}>{message.original}</p>
           ))}
         </p>
         <StyledImage src={imageURL} />
@@ -110,15 +114,15 @@ const Home = ({ initialMessages }) => {
         }
       `}</style>
     </div>
-  );
-};
+  )
+}
 
 Home.getInitialProps = async ({ pathname, req, res }) => {
   if (process.browser) {
-    return __NEXT_DATA__.props.pageProps;
+    return __NEXT_DATA__.props.pageProps
   }
-  let pageProps = {};
-  let messages = [];
+  let pageProps = {}
+  let messages = []
   // try {
   //   let message = await firebase
   //     .firestore()
@@ -139,7 +143,7 @@ Home.getInitialProps = async ({ pathname, req, res }) => {
   // } catch (err) {
   //   console.log(err);
   // }
-  return pageProps;
-};
+  return pageProps
+}
 
-export default Home;
+export default Home

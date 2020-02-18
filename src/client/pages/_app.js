@@ -63,10 +63,12 @@ export default class MyApp extends App {
 
   render() {
     const { Component, pageProps, tenantObject, url } = this.props
-    // create theme object based off the tenant object
+
     return (
-      <TenantContext.Provider value={tenantObject}>
-        <Page tenantObject={tenantObject} theme={theme}>
+      <TenantContext.Provider
+        value={{ value: tenantObject, db: db(tenantObject.hostUrl) }}
+      >
+        <Page tenantObject={tenantObject}>
           <Component {...pageProps} />
         </Page>
       </TenantContext.Provider>

@@ -8,44 +8,46 @@ const StyledImage = styled.img`
   width: 200px;
   height: 200px;
 `
-const Home = ({ initialMessages }) => {
+const Home = ({ data, req }) => {
   const {
-    value: { tagline, imageURL },
+    value: { tagline, imageURL, hostUrl },
   } = useContext(TenantContext)
   const { db: db } = useContext(TenantContext)
-  const [messages, setMessages] = useState([])
+  const [messages, setMessages] = useState(data)
+  // const [messages, setMessages] = useState([])
 
-  useEffect(() => {
-    const unsubscribe = db
-      .firestore()
-      .collection("messages")
-      .onSnapshot((snapshot) => {
-        if (snapshot.size) {
-          // we have something
-          let updatedMessages = []
-          snapshot.forEach((doc) => {
-            updatedMessages.push({ id: doc.id, ...doc.data() })
-          })
-          setMessages((p) => updatedMessages)
-        } else {
-          // it's empty
-          console.log("ERROR!")
-        }
-      })
-    // handles the cleanup
-    return () => {
-      unsubscribe()
-    }
-  }, [])
+  // useEffect(() => {
+  //   const unsubscribe = db
+  //     .firestore()
+  //     .collection("messages")
+  //     .onSnapshot((snapshot) => {
+  //       if (snapshot.size) {
+  //         // we have something
+  //         let updatedMessages = []
+  //         snapshot.forEach((doc) => {
+  //           updatedMessages.push({ id: doc.id, ...doc.data() })
+  //         })
+  //         setMessages((p) => updatedMessages)
+  //       } else {
+  //         // it's empty
+  //         console.log("ERROR!")
+  //       }
+  //     })
+  //   // handles the cleanup
+  //   return () => {
+  //     unsubscribe()
+  //   }
+  // }, [])
 
   return (
     <div>
       <div className="hero">
         <h1 className="title">{tagline}</h1>
         <p className="description">
-          {messages.map((message) => (
-            <p key={message.id}>{message.original}</p>
-          ))}
+          {messages &&
+            messages.map((message) => (
+              <p key={message.id}>{message.original}</p>
+            ))}
         </p>
         <StyledImage src={imageURL} />
         <div className="row">
@@ -117,33 +119,20 @@ const Home = ({ initialMessages }) => {
   )
 }
 
-Home.getInitialProps = async ({ pathname, req, res }) => {
-  if (process.browser) {
-    return __NEXT_DATA__.props.pageProps
+Home.getInitialProps = async function({ req, res }) {
+  const absolute = absoluteUrl(req)
+  let data = []
+  const querySnapshot = await db(absolute.host)
+    .firestore()
+    .collection("messages")
+    .get()
+  querySnapshot.forEach((doc) => {
+    data.push(doc.data())
+    console.log(data)
+  })
+  return {
+    data,
   }
-  let pageProps = {}
-  let messages = []
-  // try {
-  //   let message = await firebase
-  //     .firestore()
-  //     .collection("messages")
-  //     .get()
-  //     .then(documentSet => {
-  //       documentSet.forEach(doc => {
-  //         messages.push({
-  //           id: doc.id,
-  //           ...doc.data()
-  //         });
-  //       });
-  //       pageProps = {
-  //         ...pageProps,
-  //         initialMessages: messages
-  //       };
-  //     });
-  // } catch (err) {
-  //   console.log(err);
-  // }
-  return pageProps
 }
 
 export default Home

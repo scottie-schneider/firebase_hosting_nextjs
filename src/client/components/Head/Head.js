@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { useContext } from "react"
-import { TenantContext } from "../pages/_app"
+import { TenantContext } from "../../pages/_app"
 
 export default () => {
 	// const { tagline } = useContext(TenantContext);

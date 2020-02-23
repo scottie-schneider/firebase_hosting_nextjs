@@ -11,6 +11,8 @@ export default class MyApp extends App {
 	static async getInitialProps({ Component, router, ctx }) {
 		const absolute = absoluteUrl(ctx.req)
 		let pageProps = {}
+		let url
+		let headersHost
 		// fallback tenant object used as a default
 		let tenantObject = {
 			tagline: "Didn't find a url",
@@ -56,8 +58,10 @@ export default class MyApp extends App {
 		if (Component.getInitialProps) {
 			pageProps = await Component.getInitialProps(ctx)
 		}
-		let url = absolute
-		let headersHost = ctx.req.headers.host
+		if (ctx.req) {
+			url = absolute
+			headersHost = ctx.req.headers.host
+		}
 		return { pageProps, tenantObject, url, headersHost }
 	}
 

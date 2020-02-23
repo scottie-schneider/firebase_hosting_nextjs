@@ -37,6 +37,9 @@ const Home = ({ data, req }) => {
 	return (
 		<div>
 			<h1>Home Page</h1>
+			{data.map((message) => (
+				<p>{message.original}</p>
+			))}
 		</div>
 	)
 }

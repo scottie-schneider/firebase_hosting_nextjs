@@ -3,7 +3,7 @@ import db from "../lib/db"
 import { TenantContext } from "./_app"
 import styled from "styled-components"
 import absoluteUrl from "next-absolute-url"
-
+import Footer from "../components/Footer"
 const StyledImage = styled.img`
   width: 200px;
   height: 200px;
@@ -50,6 +50,7 @@ const Home = ({ data, req }) => {
             ))}
         </p>
         <StyledImage src={imageURL} />
+        <Footer />
         <div className="row">
           <a href="https://nextjs.org/docs" className="card">
             <h3>Documentation &rarr;</h3>

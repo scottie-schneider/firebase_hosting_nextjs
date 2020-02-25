@@ -12,8 +12,8 @@ const Page = ({ children }) => {
 			<StyledPage>
 				<GlobalStyles />
 				<Head />
-				<TopNav />
-				<Inner className="content">{children}</Inner>
+				{/* <TopNav /> */}
+				{children}
 			</StyledPage>
 		</ThemeProvider>
 	)
@@ -27,15 +27,7 @@ const StyledPage = styled.div`
 /* background: ${(props) => props.theme.red}; */
 background: white;
 color: ${(props) => props.theme.black};
-display: grid;
 min-height: 100vh;
-grid-template-rows: auto 1fr auto;
-`
-
-const Inner = styled.div`
-	max-width: ${(props) => props.theme.maxWidth};
-	margin: 0 auto;
-	padding: 2rem;
 `
 
 export default Page

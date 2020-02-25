@@ -4,6 +4,8 @@ const GlobalStyles = createGlobalStyle`
 	html {
 		box-sizing: border-box;
 		font-size: 10px;
+		height: 100vh;
+      overflow: hidden;
 	}
 	*, *:before, *:after {
 		box-sizing: inherit;
@@ -25,6 +27,8 @@ const GlobalStyles = createGlobalStyle`
 	font-weight: 400;
 	line-height: 1.65;
 	color: #333;
+	margin: 0;
+        height: 100%;
 	}
 
 	p {margin-bottom: 1.15rem;}

@@ -10,7 +10,7 @@ import { theme } from "./theme"
 import GlobalStyles from "./GlobalStyles"
 
 const Page = ({ children }) => {
-	const [userState, setUserState] = useState("no")
+	const [user, setUser] = useState(null)
 	const { db: db } = useContext(TenantContext)
 	const { auth } = db
 	const handleSignIn = () => {
@@ -27,7 +27,8 @@ const Page = ({ children }) => {
 	}
 
 	const handleLogout = () => {
-		auth.signOut()
+		db.firebase.auth
+			.signOut()
 			.then(function() {
 				alert("Logout successful")
 			})
@@ -41,18 +42,27 @@ const Page = ({ children }) => {
 		auth.onAuthStateChanged((authUser) => {
 			console.log(authUser)
 			if (authUser) {
-				setUserState("SIGNED_IN")
+				setUser((u) => {
+					return {
+						email: authUser.email,
+						emailVerified: authUser.emailVerified,
+						isAnonymous: authUser.isAnonymous,
+						uid: authUser.uid,
+					}
+				})
+			} else {
+				setUser(null)
 			}
 		})
 	}, [])
 
-	if (userState == "no") {
+	if (!user) {
 		return <button onClick={handleSignIn}>Sign In using google</button>
 	}
-	if (userState == "SIGNED_IN") {
+	if (user) {
 		return (
 			<ThemeProvider theme={theme}>
-				<UserContext.Provider value={userState}>
+				<UserContext.Provider value={user}>
 					<StyledPage>
 						<GlobalStyles />
 						<Head />

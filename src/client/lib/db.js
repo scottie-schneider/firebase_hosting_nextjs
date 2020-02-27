@@ -1,7 +1,7 @@
 // Initialize Firebase
 const firebase = require("firebase/app")
 // require("firebase/analytics");
-require("firebase/auth")
+const auth = require("firebase/auth")
 require("firebase/firestore")
 require("firebase/functions")
 require("firebase/storage")
@@ -27,7 +27,8 @@ const db = (url) => {
 				console.error("Firebase initialization error", err.stack)
 			}
 		}
-		return firebase
+		const auth = firebase.auth()
+		return { firebase, auth }
 	} else if (url == "us-central1-wl-test-1.cloudfunctions.net") {
 		try {
 			let config = {
@@ -48,7 +49,8 @@ const db = (url) => {
 				console.error("Firebase initialization error", err.stack)
 			}
 		}
-		return firebase
+		const auth = firebase.auth()
+		return { firebase, auth }
 	} else if (url == "us-central1-wl-test-2.cloudfunctions.net") {
 		try {
 			let config = {
@@ -69,7 +71,8 @@ const db = (url) => {
 				console.error("Firebase initialization error", err.stack)
 			}
 		}
-		return firebase
+		const auth = firebase.auth()
+		return { firebase, auth }
 	} else {
 		try {
 			let config = {
@@ -90,7 +93,8 @@ const db = (url) => {
 				console.error("Firebase initialization error", err.stack)
 			}
 		}
-		return firebase
+		const auth = firebase.auth()
+		return { firebase, auth }
 	}
 }
 

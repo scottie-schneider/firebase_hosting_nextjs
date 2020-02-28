@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useContext } from "react"
 import db from "../lib/db"
 import { TenantContext } from "./_app"
-import styled from "styled-components"
 import absoluteUrl from "next-absolute-url"
 const Home = ({ data, req }) => {
 	const {

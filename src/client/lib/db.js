@@ -20,6 +20,13 @@ const db = (url) => {
 				measurementId: process.env.FIREBASE_MEASUREMENT_ID_FUE,
 			}
 			firebase.initializeApp(config)
+			if (process.env.FIREBASE_FUNCTIONS_EMULATOR_URL) {
+				firebase
+					.functions()
+					.useFunctionsEmulator(
+						process.env.FIREBASE_FUNCTIONS_EMULATOR_URL
+					)
+			}
 		} catch (err) {
 			// we skip the "already exists" message which is
 			// not an actual error when we're hot-reloading
@@ -41,6 +48,13 @@ const db = (url) => {
 				measurementId: process.env.FIREBASE_MEASUREMENT_ID_1,
 			}
 			firebase.initializeApp(config)
+			if (process.env.FIREBASE_FUNCTIONS_EMULATOR_URL) {
+				firebase
+					.functions()
+					.useFunctionsEmulator(
+						process.env.FIREBASE_FUNCTIONS_EMULATOR_URL
+					)
+			}
 		} catch (err) {
 			// we skip the "already exists" message which is
 			// not an actual error when we're hot-reloading
@@ -62,6 +76,13 @@ const db = (url) => {
 				measurementId: process.env.FIREBASE_MEASUREMENT_ID_2,
 			}
 			firebase.initializeApp(config)
+			if (process.env.FIREBASE_FUNCTIONS_EMULATOR_URL) {
+				firebase
+					.functions()
+					.useFunctionsEmulator(
+						process.env.FIREBASE_FUNCTIONS_EMULATOR_URL
+					)
+			}
 		} catch (err) {
 			// we skip the "already exists" message which is
 			// not an actual error when we're hot-reloading
@@ -83,6 +104,13 @@ const db = (url) => {
 				measurementId: process.env.FIREBASE_MEASUREMENT_ID_FUE,
 			}
 			firebase.initializeApp(config)
+			if (process.env.FIREBASE_FUNCTIONS_EMULATOR_URL) {
+				firebase
+					.functions()
+					.useFunctionsEmulator(
+						process.env.FIREBASE_FUNCTIONS_EMULATOR_URL
+					)
+			}
 		} catch (err) {
 			// we skip the "already exists" message which is
 			// not an actual error when we're hot-reloading

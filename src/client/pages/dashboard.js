@@ -1,9 +1,13 @@
+import React, { useContext, useEffect } from "react"
 import Head from "next/head"
 import styled from "styled-components"
 import { useState } from "react"
 import Sidebar from "../components/Sidebar"
 import MobileSidebar from "../components/MobileSidebar"
 import MenuIcon from "../components/icons/MenuIcon"
+import absoluteUrl from "next-absolute-url"
+import db from "../lib/db"
+import { TenantContext } from "./_app"
 
 const GridContainer = styled.div`
 	display: grid;
@@ -456,23 +460,26 @@ const Message = ({ message: { content, time, from, user = {}, img } }) => {
 	)
 }
 const Conversation = ({
-	conversation: { id, img, date, name, message },
+	conversation: { firstName, lastName, lastMessage, photo },
 	handleClick,
 }) => {
 	return (
-		<ConversationSnippet onClick={() => handleClick(id)}>
+		<ConversationSnippet onClick={() => handleClick(leadId)}>
 			<div className="lead-details">
-				<img src={img} />
-				<div className="created-date">{date}</div>
+				<img src={photo} />
+				<div className="created-date">one minute ago</div>
 			</div>
-			<div className="title-text">{name}</div>
-			<div className="conversation-message">{message}</div>
+			<div className="title-text">
+				{firstName} {lastName}
+			</div>
+			<div className="conversation-message">{lastMessage}</div>
 		</ConversationSnippet>
 	)
 }
 
-const Dash = () => {
+const Dash = ({ leads }) => {
 	const [collapse, setCollapse] = useState(false)
+	const { db: db } = useContext(TenantContext)
 	const collapseMenu = () => {
 		setCollapse((p) => !collapse)
 	}
@@ -496,6 +503,17 @@ const Dash = () => {
 	const handleMenuClick = () => {
 		setShowMobileMenu((p) => !showMobileMenu)
 	}
+
+	// useEffect(() => {
+	// 	const getCards = db.functions().httpsCallable("testEmail")
+	// 	getCards()
+	// 		.then(({ data }) => {
+	// 			console.log(data)
+	// 		})
+	// 		.catch((error) => {
+	// 			console.log(error)
+	// 		})
+	// }, [])
 	return (
 		<GridContainer collapse={collapse}>
 			<MobileSidebar
@@ -517,9 +535,10 @@ const Dash = () => {
 						<input type="text" placeholder="search" />
 					</SearchContainer>
 					<ConversationList>
-						{conversations.map((conversation) => (
+						{console.log(leads.length)}
+						{leads.map((conversation) => (
 							<Conversation
-								id={conversation.id}
+								id={conversation.leadId}
 								conversation={conversation}
 								handleClick={handleClick}
 							/>
@@ -549,6 +568,24 @@ const Dash = () => {
 			</ChatBody>
 		</GridContainer>
 	)
+}
+
+Dash.getInitialProps = async ({ req, res }) => {
+	const absolute = absoluteUrl(req)
+	let leads = []
+	const getCards = db(absolute.host)
+		.functions()
+		.httpsCallable("testEmail")
+	await getCards()
+		.then(({ data }) => {
+			leads = data
+		})
+		.catch((error) => {
+			console.log(error)
+		})
+	return {
+		leads,
+	}
 }
 
 export default Dash

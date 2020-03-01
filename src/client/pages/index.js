@@ -5,20 +5,7 @@ import withAuth from "../components/withAuth"
 import { TenantContext } from "./_app"
 const Home = ({ messages, req }) => {
 	const { firestore, auth } = useContext(TenantContext)
-	// const [userState, setUserState] = useState("no")
-
-	// const handleSignIn = () => {
-	// 	db.firebase
-	// 		.auth()
-	// 		.signInWithEmailAndPassword("scott@warcat.co", "speje33ma*")
-	// 		.catch(function(error) {
-	// 			// Handle Errors here.
-	// 			var errorCode = error.code
-	// 			var errorMessage = error.message
-	// 			console.log(errorCode)
-	// 			console.log(errorMessage)
-	// 		})
-	// }
+	const [leadMessages, setLeadMessages] = useState(messages)
 
 	const handleLogout = () => {
 		auth.signOut()
@@ -30,47 +17,48 @@ const Home = ({ messages, req }) => {
 				console.log(error)
 			})
 	}
+	const fetchMessages = async () => {
+		const messages = []
+		try {
+			await firestore
+				.collection("messages")
+				.where("userId", "==", 1)
+				.where("leadId", "==", 1)
+				.get()
+				.then((documentSet) => {
+					if (documentSet !== null) {
+						documentSet.forEach((doc) => {
+							messages.push({
+								id: doc.id,
+								...doc.data(),
+							})
+						})
+						setLeadMessages(messages)
+					}
+					return messages
+				})
+		} catch (err) {
+			console.log("allen we had an error")
+			console.log(err)
+		}
+	}
 
-	// useEffect(() => {
-	// 	auth.onAuthStateChanged((authUser) => {
-	// 		console.log(authUser)
-	// 		if (authUser) {
-	// 			setUserState("SIGNED_IN")
-	// 		} else {
-	// 			router.push("/")
-	// 		}
-	// 	})
-	// }, [])
-	// const [messages, setMessages] = useState([])
-
-	// useEffect(() => {
-	//   const unsubscribe = db
-	//     .firestore()
-	//     .collection("messages")
-	//     .onSnapshot((snapshot) => {
-	//       if (snapshot.size) {
-	//         // we have something
-	//         let updatedMessages = []
-	//         snapshot.forEach((doc) => {
-	//           updatedMessages.push({ id: doc.id, ...doc.data() })
-	//         })
-	//         setMessages((p) => updatedMessages)
-	//       } else {
-	//         // it's empty
-	//         console.log("ERROR!")
-	//       }
-	//     })
-	//   // handles the cleanup
-	//   return () => {
-	//     unsubscribe()
-	//   }
-	// }, [])
+	useEffect(() => {
+		fetchMessages()
+		const unsubscribe = firestore
+			.collection("messages")
+			.onSnapshot(fetchMessages)
+		// handles the cleanup
+		return () => {
+			unsubscribe()
+		}
+	}, [])
 
 	return (
 		<div>
 			<h1>Home Page</h1>
-			{messages.map((message) => (
-				<p>{message.original}</p>
+			{leadMessages.map((message) => (
+				<p>{message.message}</p>
 			))}
 
 			<button onClick={handleLogout}>Logout</button>
@@ -82,10 +70,12 @@ Home.getInitialProps = async function({ req, res }) {
 	const absolute = absoluteUrl(req)
 	let messages = []
 	const firebase = db(absolute.host)
-
+	// step one, seed initial messages
 	await firebase
 		.firestore()
 		.collection("messages")
+		.where("userId", "==", 1)
+		.where("leadId", "==", 1)
 		.get()
 		.then((documentSet) => {
 			if (documentSet !== null) {

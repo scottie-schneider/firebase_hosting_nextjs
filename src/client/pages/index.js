@@ -1,16 +1,10 @@
 import React, { useState, useEffect, useContext } from "react"
 import db from "../lib/db"
-import router from "next/router"
-import { TenantContext } from "./_app"
 import absoluteUrl from "next-absolute-url"
-const Home = ({ data, req }) => {
-	const {
-		value: { tagline, imageURL, hostUrl },
-	} = useContext(TenantContext)
-	const { db: db } = useContext(TenantContext)
-	const { auth } = db
-	console.log(auth)
-	const [messages, setMessages] = useState(data)
+import withAuth from "../components/withAuth"
+import { TenantContext } from "./_app"
+const Home = ({ messages, req }) => {
+	const { firestore, auth } = useContext(TenantContext)
 	// const [userState, setUserState] = useState("no")
 
 	// const handleSignIn = () => {
@@ -75,7 +69,7 @@ const Home = ({ data, req }) => {
 	return (
 		<div>
 			<h1>Home Page</h1>
-			{data.map((message) => (
+			{messages.map((message) => (
 				<p>{message.original}</p>
 			))}
 
@@ -86,18 +80,24 @@ const Home = ({ data, req }) => {
 
 Home.getInitialProps = async function({ req, res }) {
 	const absolute = absoluteUrl(req)
-	let data = []
-	const querySnapshot = await db(absolute.host)
-		.firebase.firestore()
+	let messages = []
+	const firebase = db(absolute.host)
+
+	await firebase
+		.firestore()
 		.collection("messages")
 		.get()
-	querySnapshot.forEach((doc) => {
-		data.push(doc.data())
-		console.log(data)
-	})
-	return {
-		data,
-	}
+		.then((documentSet) => {
+			if (documentSet !== null) {
+				documentSet.forEach((doc) => {
+					messages.push({
+						id: doc.id,
+						...doc.data(),
+					})
+				})
+			}
+		})
+	return { messages }
 }
 
-export default Home
+export default withAuth(Home)

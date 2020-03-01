@@ -69,7 +69,12 @@ export default class MyApp extends App {
 
 		return (
 			<TenantContext.Provider
-				value={{ value: tenantObject, db: db(tenantObject.hostUrl) }}
+				value={{
+					value: tenantObject,
+					firebase: db(tenantObject.hostUrl),
+					firestore: db(tenantObject.hostUrl).firestore(),
+					auth: db(tenantObject.hostUrl).auth(),
+				}}
 			>
 				<Page tenantObject={tenantObject}>
 					<Component {...pageProps} />

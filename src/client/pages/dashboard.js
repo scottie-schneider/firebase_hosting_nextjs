@@ -4,7 +4,7 @@ import { useState } from "react"
 import Sidebar from "../components/Sidebar"
 import MobileSidebar from "../components/MobileSidebar"
 import MenuIcon from "../components/icons/MenuIcon"
-
+import withAuth from "../components/withAuth"
 const GridContainer = styled.div`
 	display: grid;
 	height: 100vh;
@@ -551,4 +551,4 @@ const Dash = () => {
 	)
 }
 
-export default Dash
+export default withAuth(Dash)

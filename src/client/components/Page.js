@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from "react"
 import styled, { ThemeProvider } from "styled-components"
-import { FirebaseContext } from "../pages/_app"
+import { TenantContext } from "../pages/_app"
 import Head from "./Head/Head"
 import TopNav from "./TopNav/TopNav"
 const UserContext = createContext(null)
@@ -10,14 +10,23 @@ import { theme } from "./theme"
 import GlobalStyles from "./GlobalStyles"
 
 const Page = ({ children }) => {
+	const { auth } = useContext(TenantContext)
+	const [user, setUser] = useState(null)
+	useEffect(() => {
+		auth.onAuthStateChanged((authUser) => {
+			setUser(authUser)
+		})
+	}, [])
 	return (
 		<ThemeProvider theme={theme}>
-			<StyledPage>
-				<GlobalStyles />
-				<Head />
-				<TopNav />
-				{children}
-			</StyledPage>
+			<UserContext.Provider value={user}>
+				<StyledPage>
+					<GlobalStyles />
+					<Head />
+					<TopNav />
+					{children}
+				</StyledPage>
+			</UserContext.Provider>
 		</ThemeProvider>
 	)
 }
